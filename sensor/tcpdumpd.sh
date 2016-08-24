@@ -18,7 +18,7 @@ FILTER=""
 if ! test -d $BASELOCATION/`date +%Y%m%d`
 then
 	echo "Storage location doesn't exist. Cron daemon running to create dirs? Creating now...but ensure the crontab is running correctly"
-	if ! mkdir $BASELOCATION/`date +%Y%m%d` 
+	if ! mkdir -p $BASELOCATION/`date +%Y%m%d` 
 	then
 		echo "Cannot create storage dir, exiting"
 		exit 1
